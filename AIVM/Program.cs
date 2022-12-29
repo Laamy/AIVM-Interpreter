@@ -10,7 +10,10 @@ namespace AIVM
     {
         static void Main(string[] args)
         {
-            var instructions = SDK.AIVM.inputPromtThenGreetExample;
+            //AIVMFilestream.WriteInstructionsToFile(SDK.AIVM.stringSizeExample, "Examples\\StringSizeExample.aivm");
+            //AIVMFilestream.WriteInstructionsToFile(SDK.AIVM.inputPromtThenGreetExample, "Examples\\InputPromtThenGreetExample.aivm");
+
+            var instructions = AIVMFilestream.ParseFile("Examples\\StringSizeExample.aivm");
 
             var memory = new List<int>(Enumerable.Repeat(0, 5242880)); // 5mb of ram
 
